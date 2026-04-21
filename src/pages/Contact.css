@@ -1,0 +1,49 @@
+.contact-section { padding: 80px 0; background: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+.contact-cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+.cc { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: var(--gray-100); border-left: 3px solid var(--blue-500); }
+.cc-icon { font-size: 24px; flex-shrink: 0; width: 36px; }
+.cc strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 13px; text-transform: uppercase; color: var(--blue-900); margin-bottom: 4px; letter-spacing: 0.05em; }
+.cc p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+.cc a { color: var(--blue-500); text-decoration: none; }
+.cc a:hover { text-decoration: underline; }
+
+.cert-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.cert-badges span { background: var(--blue-900); color: white; font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 0.08em; padding: 6px 14px; }
+
+.contact-form { background: var(--gray-100); padding: 40px; }
+.contact-form h3 { font-family: var(--font-display); font-weight: 800; font-size: 22px; text-transform: uppercase; color: var(--blue-900); margin-bottom: 28px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--blue-900); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
+  background: white;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-body);
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--blue-500); }
+
+.success-box { background: var(--gray-100); padding: 64px 40px; text-align: center; }
+.success-box h3 { font-family: var(--font-display); font-weight: 800; font-size: 28px; text-transform: uppercase; color: var(--blue-900); margin-bottom: 12px; }
+.success-box p { color: var(--gray-600); }
+
+.map-section { height: 400px; }
+
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 24px; }
+}
