@@ -125,7 +125,7 @@ export default function GetQuote() {
               Responding in under 4 hours
             </div>
             <h1>
-              Get a Free<br />
+              Get a Free<br className="hide-mobile" />
               <span className="gq-h1-accent">Freight Quote</span>
             </h1>
             <p>Tell us about your shipment and our logistics experts will send you a competitive, tailored quote fast.</p>

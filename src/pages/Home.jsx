@@ -186,8 +186,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            GLOBAL FREIGHT <br />
-            <span className="hero-gradient-text">SOLUTIONS</span><br />
+            GLOBAL FREIGHT <br className="hide-mobile" />
+            <span className="hero-gradient-text">SOLUTIONS</span><br className="hide-mobile" />
             DELIVERED PRECISELY
           </motion.h1>
 

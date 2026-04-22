@@ -228,15 +228,35 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .about-intro-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-visual { display: none; }
+  .about-intro-grid { 
+    grid-template-columns: 1fr; 
+    gap: 48px; 
+    text-align: center;
+  }
+  
+  .about-visual { 
+    order: -1; 
+  }
+  
+  .about-img-wrap {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 16px 40px rgba(14,52,96,0.12), 0 0 0 8px var(--blue-100);
+  }
+  .about-img-wrap img { width: 140px; }
+  
+  .about-intro p { max-width: 600px; margin-left: auto; margin-right: auto; }
+  
   .certs-grid { grid-template-columns: repeat(2, 1fr); }
   .mv-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-intro, .certs-section, .mv-section, .team-section { padding: 80px 0; }
+  .about-intro, .certs-section, .mv-section, .team-section { padding: 64px 0; }
 }
 
 @media (max-width: 600px) {
   .certs-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
+  .about-stat-chips { gap: 8px; }
+  .chip { padding: 8px 16px; font-size: 11px; }
+  .chip strong { font-size: 15px; }
 }

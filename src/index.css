@@ -474,3 +474,12 @@ body {
     justify-content: center;
   }
 }
+
+/* Hide elements on mobile */
+.hide-mobile {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+}
