@@ -1,46 +1,241 @@
-.about-intro { padding: 100px 0; background: white; }
-.about-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.about-intro p { color: var(--text-body); line-height: 1.7; }
-.about-visual { display: flex; flex-direction: column; align-items: center; gap: 24px; }
-.about-img-wrap { width: 280px; height: 280px; border-radius: 50%; background: var(--gray-100); display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(14,52,96,0.15); }
-.about-img-wrap img { width: 220px; height: auto; }
-.about-stat-chips { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-.chip { background: var(--blue-100); color: var(--blue-900); padding: 10px 20px; font-family: var(--font-display); font-size: 14px; font-weight: 600; }
-.chip strong { font-size: 18px; display: block; color: var(--blue-700); }
+.about-intro {
+  padding: 120px 0;
+  background: white;
+}
 
-.certs-section { padding: 80px 0; background: var(--gray-100); }
-.section-center { text-align: center; margin-bottom: 48px; }
-.section-center .section-tag { justify-content: center; }
-.section-center .section-tag::before { display: none; }
-.certs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.cert-card { background: white; border: 1px solid var(--gray-200); padding: 32px 24px; text-align: center; transition: all 0.3s; }
-.cert-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(14,52,96,0.1); }
-.cert-icon { font-size: 40px; display: block; margin-bottom: 16px; }
-.cert-card strong { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--blue-900); display: block; margin-bottom: 8px; }
-.cert-card p { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 88px;
+  align-items: center;
+}
 
-.mv-section { padding: 80px 0; background: var(--gray-100); }
-.mv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.mv-card { background: white; border: 1px solid var(--gray-200); padding: 40px 28px; text-align: center; }
-.mv-icon { font-size: 44px; margin-bottom: 20px; }
-.mv-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 22px; text-transform: uppercase; color: var(--blue-900); margin-bottom: 16px; }
-.mv-card p { color: var(--gray-600); font-size: 15px; line-height: 1.7; }
+.about-intro p {
+  color: var(--text-body);
+  line-height: 1.8;
+  font-size: 17px;
+  margin-bottom: 16px;
+}
 
-.team-section { padding: 80px 0; background: white; }
-.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.team-card { text-align: center; padding: 40px 24px; border: 1px solid var(--gray-200); transition: all 0.3s; }
-.team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(14,52,96,0.1); }
-.team-avatar { font-size: 52px; margin-bottom: 16px; width: 80px; height: 80px; background: var(--blue-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
-.team-card h4 { font-family: var(--font-display); font-weight: 700; font-size: 16px; text-transform: uppercase; color: var(--blue-900); margin-bottom: 8px; }
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.about-img-wrap {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 24px 72px rgba(14,52,96,0.16), 0 0 0 12px var(--blue-100);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+.about-img-wrap img { width: 230px; height: auto; }
+
+.about-stat-chips {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chip {
+  background: var(--blue-100);
+  color: var(--blue-900);
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--blue-200);
+  transition: all 0.25s ease;
+}
+
+.chip:hover {
+  background: var(--blue-700);
+  color: white;
+  border-color: var(--blue-700);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(51,92,218,0.3);
+}
+
+.chip strong {
+  font-size: 20px;
+  display: block;
+  color: var(--blue-700);
+  font-weight: 800;
+  margin-bottom: 2px;
+  transition: color 0.25s;
+}
+
+.chip:hover strong { color: white; }
+
+/* Certs */
+.certs-section { padding: 100px 0; background: var(--gray-50); }
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cert-card {
+  background: white;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 36px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-500), var(--orange));
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(14,52,96,0.12);
+  border-color: var(--blue-200);
+}
+
+.cert-card:hover::before { transform: scaleX(1); }
+
+.cert-icon {
+  font-size: 44px;
+  display: block;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+}
+
+.cert-card strong {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--blue-900);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cert-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
+/* Mission & Vision */
+.mv-section { padding: 100px 0; background: var(--gray-50); }
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.mv-card {
+  background: white;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 44px 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(14,52,96,0.1);
+  border-color: var(--blue-200);
+}
+
+.mv-icon { font-size: 48px; margin-bottom: 20px; display: block; }
+
+.mv-card h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--blue-900);
+  margin-bottom: 16px;
+}
+
+.mv-card p { color: var(--gray-600); font-size: 15px; line-height: 1.75; }
+
+/* Team */
+.team-section { padding: 100px 0; background: white; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.team-card {
+  text-align: center;
+  padding: 44px 24px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(14,52,96,0.1);
+  border-color: var(--blue-200);
+}
+
+.team-avatar {
+  font-size: 52px;
+  margin-bottom: 16px;
+  width: 88px;
+  height: 88px;
+  background: var(--blue-100);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  border: 3px solid white;
+  box-shadow: 0 4px 16px rgba(14,52,96,0.12);
+  transition: transform 0.3s;
+}
+
+.team-card:hover .team-avatar { transform: scale(1.08); }
+
+.team-card h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--blue-900);
+  margin-bottom: 8px;
+}
+
 .team-card p { font-size: 13px; color: var(--gray-600); }
 
+/* Responsive */
 @media (max-width: 1024px) {
-  .about-intro-grid { grid-template-columns: 1fr; }
+  .about-intro-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-visual { display: none; }
   .certs-grid { grid-template-columns: repeat(2, 1fr); }
   .mv-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-intro, .certs-section, .mv-section, .team-section { padding: 80px 0; }
 }
+
 @media (max-width: 600px) {
   .certs-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }

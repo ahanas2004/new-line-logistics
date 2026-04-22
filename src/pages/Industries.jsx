@@ -1,60 +1,109 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import './Industries.css'
 
 const industries = [
-  { icon: '🚗', title: 'Automotive', path: '/industries/automotive', desc: 'CKD/CBU vehicles and spare parts — JIT logistics for OEMs and dealers.', img: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80' },
-  { icon: '💊', title: 'Pharmaceuticals', path: '/industries/pharmaceuticals', desc: 'GDP-compliant cold chain logistics for APIs, formulations, and medical devices.', img: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=800&q=80' },
-  { icon: '⚙️', title: 'Oil & Gas', path: '/industries/oil-gas', desc: 'Project cargo and DG freight for upstream and downstream energy operations.', img: 'https://images.unsplash.com/photo-1620825937374-87fc7d6aaf8c?auto=format&fit=crop&w=800&q=80' },
-  { icon: '🛒', title: 'Retail & E-commerce', path: '/industries/retail-ecommerce', desc: 'Fast, flexible cross-border freight for online retailers and marketplace sellers.', img: 'https://images.unsplash.com/photo-1586528116311-ad8ed7c663c0?auto=format&fit=crop&w=800&q=80' },
-  { icon: '🔧', title: 'Engineering', path: '/industries/engineering', desc: 'Heavy machinery, industrial equipment, and fabricated goods logistics.', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80' },
-  { icon: '🧪', title: 'Chemicals', path: '/industries/chemicals', desc: 'IMDG-compliant handling for hazardous and specialty chemical shipments.', img: 'https://images.unsplash.com/photo-1614935151651-0bea6508abb0?auto=format&fit=crop&w=800&q=80' },
+  {
+    icon: '🚗', title: 'Automotive', path: '/industries/automotive',
+    desc: 'CKD/CBU vehicles and spare parts — JIT logistics for OEMs and dealers.',
+    img: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80',
+    tag: 'JIT Logistics',
+  },
+  {
+    icon: '💊', title: 'Pharmaceuticals', path: '/industries/pharmaceuticals',
+    desc: 'GDP-compliant cold chain logistics for APIs, formulations, and medical devices.',
+    img: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=800&q=80',
+    tag: 'Cold Chain',
+  },
+  {
+    icon: '⚙️', title: 'Oil & Gas', path: '/industries/oil-gas',
+    desc: 'Project cargo and DG freight for upstream and downstream energy operations.',
+    img: 'https://images.unsplash.com/photo-1620825937374-87fc7d6aaf8c?auto=format&fit=crop&w=800&q=80',
+    tag: 'DG Certified',
+  },
+  {
+    icon: '🛒', title: 'Retail & E-commerce', path: '/industries/retail-ecommerce',
+    desc: 'Fast, flexible cross-border freight for online retailers and marketplace sellers.',
+    img: 'https://images.unsplash.com/photo-1586528116311-ad8ed7c663c0?auto=format&fit=crop&w=800&q=80',
+    tag: 'Express',
+  },
+  {
+    icon: '🔧', title: 'Engineering', path: '/industries/engineering',
+    desc: 'Heavy machinery, industrial equipment, and fabricated goods logistics.',
+    img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    tag: 'ODC Capable',
+  },
+  {
+    icon: '🧪', title: 'Chemicals', path: '/industries/chemicals',
+    desc: 'IMDG-compliant handling for hazardous and specialty chemical shipments.',
+    img: 'https://images.unsplash.com/photo-1614935151651-0bea6508abb0?auto=format&fit=crop&w=800&q=80',
+    tag: 'IMDG Certified',
+  },
 ]
 
 export default function Industries() {
   return (
-    <div>
-      <div className="page-hero">
+    <div className="industries-page">
+
+      {/* ── Page Hero ── */}
+      <div className="page-hero industries-hero">
+        <div className="industries-hero-orb ih-orb1" />
+        <div className="industries-hero-orb ih-orb2" />
         <div className="container">
           <div className="breadcrumb">
             <Link to="/">Home</Link><span className="sep">/</span> Industries
           </div>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <motion.div
+            className="ih-hero-tag"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="ih-hero-dot" />
+            6 Industry Verticals
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             Industries <span>We Serve</span>
           </motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25 }}
+          >
             Specialized logistics and compliance expertise across six key sectors of global trade.
           </motion.p>
         </div>
       </div>
 
-      <section style={{ padding: '80px 0', background: 'white' }}>
+      {/* ── Industries Grid ── */}
+      <section className="ih-grid-section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 28 }}>
+          <div className="ih-grid">
             {industries.map((ind, i) => (
               <motion.div
                 key={ind.path}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ duration: 0.45, delay: i * 0.09 }}
               >
-                <Link to={ind.path} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
-                  <div style={{
-                    background: 'white', border: '1px solid var(--gray-200)', height: '100%', cursor: 'pointer',
-                    transition: 'all 0.3s', position: 'relative', overflow: 'hidden',
-                    display: 'flex', flexDirection: 'column'
-                  }}
-                    onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 12px 30px rgba(0,36,150,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
-                    onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
-                  >
-                    <img src={ind.img} alt={ind.title} style={{ width: '100%', height: 200, objectFit: 'cover' }} />
-                    <div style={{ padding: '24px 32px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                      <div style={{ fontSize: 32, marginBottom: 16 }}>{ind.icon}</div>
-                      <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 20, textTransform: 'uppercase', color: 'var(--blue-900)', marginBottom: 12 }}>{ind.title}</h3>
-                      <p style={{ color: 'var(--gray-600)', fontSize: 14, lineHeight: 1.7, flex: 1, marginBottom: 24 }}>{ind.desc}</p>
-                      <span style={{ color: 'var(--blue-500)', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                        Explore Solution →
-                      </span>
+                <Link to={ind.path} className="ih-card">
+                  <div className="ih-img-wrap">
+                    <img src={ind.img} alt={ind.title} className="ih-img" />
+                    <div className="ih-img-overlay" />
+                    <span className="ih-tag">{ind.tag}</span>
+                    <span className="ih-icon-overlay">{ind.icon}</span>
+                  </div>
+                  <div className="ih-card-body">
+                    <h3 className="ih-title">{ind.title}</h3>
+                    <p className="ih-desc">{ind.desc}</p>
+                    <div className="ih-learn">
+                      <span>Explore Solution</span>
+                      <span className="ih-learn-arrow">→</span>
                     </div>
                   </div>
                 </Link>
@@ -64,11 +113,30 @@ export default function Industries() {
         </div>
       </section>
 
-      <section style={{ background: 'var(--blue-100)', padding: '64px 0', textAlign: 'center' }}>
-        <div className="container">
-          <h2 className="section-title" style={{ color: 'var(--blue-900)', marginBottom: 16 }}>Don't See Your Industry?</h2>
-          <p style={{ color: 'var(--gray-600)', marginBottom: 32 }}>We work across many more sectors. Contact us for a tailored solution.</p>
-          <Link to="/contact" className="btn-primary">Contact Our Team</Link>
+      {/* ── Custom CTA Band ── */}
+      <section className="ih-custom-cta">
+        <div className="container ih-custom-inner">
+          <motion.div
+            className="ih-custom-content"
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="section-tag">Don't See Your Sector?</p>
+            <h2 className="section-title">We Work Across <span>Many More</span></h2>
+            <p className="ih-custom-sub">
+              NEXL handles diverse cargo types across virtually every trade sector. Contact us for a tailored logistics solution built around your specific needs.
+            </p>
+          </motion.div>
+          <motion.div
+            className="ih-custom-actions"
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <Link to="/contact" className="btn-primary"><span>Contact Our Team</span></Link>
+            <Link to="/get-quote" className="btn-outline">Get a Quote</Link>
+          </motion.div>
         </div>
       </section>
     </div>

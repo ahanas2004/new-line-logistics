@@ -6,6 +6,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-pattern"></div>
+      <div className="footer-glow"></div>
       
       <div className="footer-body">
         <div className="container">

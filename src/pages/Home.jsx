@@ -116,7 +116,7 @@ function ServiceCard({ icon, title, desc, path, delay }) {
         <div className="sc-icon">{icon}</div>
         <h3>{title}</h3>
         <p>{desc}</p>
-        <span className="sc-arrow">→</span>
+        <span className="sc-arrow">Learn more</span>
       </Link>
     </motion.div>
   )
@@ -158,12 +158,16 @@ export default function Home() {
 
         {/* Floating orbs */}
         <motion.div className="hero-orb hero-orb-1"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
-          transition={{ duration: 6, repeat: Infinity }}
+          animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.3, 0.2] }}
+          transition={{ duration: 7, repeat: Infinity }}
         />
         <motion.div className="hero-orb hero-orb-2"
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 8, repeat: Infinity }}
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.12, 0.22, 0.12] }}
+          transition={{ duration: 9, repeat: Infinity }}
+        />
+        <motion.div className="hero-orb hero-orb-3"
+          animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.16, 0.08] }}
+          transition={{ duration: 11, repeat: Infinity }}
         />
 
         <div className="container hero-content">
@@ -222,9 +226,10 @@ export default function Home() {
         </div>
 
         <div className="hero-scroll">
+          <div className="hero-scroll-line" />
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
           >↓</motion.div>
         </div>
       </section>

@@ -1,110 +1,171 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import './IndustryDetail.css'
 
 export default function IndustryDetail({ icon, title, subtitle, description, challenges, solutions, stats }) {
   return (
-    <div>
-      <div className="page-hero">
+    <div className="industry-detail-page">
+
+      {/* ── Page Hero ── */}
+      <div className="page-hero id-hero">
+        <div className="id-hero-glow" />
         <div className="container">
           <div className="breadcrumb">
             <Link to="/">Home</Link><span className="sep">/</span>
             <Link to="/industries">Industries</Link><span className="sep">/</span>
             {title}
           </div>
-          <motion.div style={{ fontSize: 64, marginBottom: 16 }}
-            initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+          <motion.div
+            className="id-hero-icon"
+            initial={{ opacity: 0, scale: 0.4, rotate: -10 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.5, type: 'spring', bounce: 0.4 }}
+          >
             {icon}
           </motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             <span>{title}</span>
           </motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>{subtitle}</motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            {subtitle}
+          </motion.p>
+          <motion.div
+            className="id-hero-actions"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.45 }}
+          >
+            <Link to="/get-quote" className="btn-white">Get Sector Quote</Link>
+            <a href="mailto:info@nexllogistics.com" className="btn-outline-white">✉️ Email Us</a>
+          </motion.div>
         </div>
       </div>
 
-      {/* Overview */}
-      <section style={{ padding: '80px 0', background: 'white' }}>
+      {/* ── Overview + Challenges ── */}
+      <section className="id-overview">
         <div className="container industry-detail-grid">
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <p className="section-tag">Industry Focus</p>
-            <h2 className="section-title" style={{ marginBottom: 24 }}>Logistics for <span>{title}</span></h2>
+            <h2 className="section-title" style={{ marginBottom: 24 }}>
+              Logistics for <span>{title}</span>
+            </h2>
             {description.map((para, i) => (
-              <p key={i} style={{ color: 'var(--text-body)', lineHeight: 1.75, marginBottom: 16 }}>{para}</p>
+              <p key={i} className="id-para">{para}</p>
             ))}
-            <div style={{ marginTop: 32 }}>
+            <div style={{ marginTop: 36 }}>
               <Link to="/get-quote" className="btn-primary"><span>Get Sector Quote</span></Link>
             </div>
           </motion.div>
 
-          {/* Challenges */}
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <div style={{ background: 'var(--gray-100)', padding: 40 }}>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 18, textTransform: 'uppercase', color: 'var(--blue-900)', marginBottom: 24, letterSpacing: '0.06em' }}>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="id-challenges-box">
+              <h3 className="id-challenges-title">
+                <span className="id-ch-icon">⚠️</span>
                 Sector Challenges
               </h3>
-              {challenges.map((c, i) => (
-                <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 16, alignItems: 'flex-start' }}>
-                  <div style={{ width: 8, height: 8, background: 'var(--orange)', borderRadius: '50%', marginTop: 6, flexShrink: 0 }} />
-                  <p style={{ color: 'var(--gray-600)', fontSize: 14, lineHeight: 1.6 }}>{c}</p>
-                </div>
-              ))}
+              <ul className="id-challenges-list">
+                {challenges.map((c, i) => (
+                  <li key={i} className="id-challenge-item">
+                    <span className="id-ch-bullet" />
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* NEXL Solutions */}
-      <section style={{ padding: '80px 0', background: 'var(--gray-100)' }}>
+      {/* ── NEXL Solutions ── */}
+      <section className="id-solutions">
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <p className="section-tag" style={{ justifyContent: 'center' }}>Our Approach</p>
+          <div className="section-center" style={{ marginBottom: 56 }}>
+            <p className="section-tag">Our Approach</p>
             <h2 className="section-title">NEXL <span>Solutions</span></h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
+          <div className="id-solutions-grid">
             {solutions.map((s, i) => (
               <motion.div
                 key={i}
-                className="card"
+                className="id-solution-card"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <div style={{ fontSize: 36, marginBottom: 16 }}>{s.icon}</div>
-                <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 16, textTransform: 'uppercase', color: 'var(--blue-900)', marginBottom: 10 }}>{s.title}</h4>
-                <p style={{ color: 'var(--gray-600)', fontSize: 14, lineHeight: 1.6 }}>{s.desc}</p>
+                <div className="id-sol-icon">{s.icon}</div>
+                <h4 className="id-sol-title">{s.title}</h4>
+                <p className="id-sol-desc">{s.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Stats */}
+      {/* ── Stats ── */}
       {stats && (
-        <section style={{ background: 'var(--blue-700)', padding: '64px 0' }}>
-          <div className="container stats-auto-grid" style={{ gridTemplateColumns: `repeat(${stats.length}, 1fr)` }}>
+        <section className="id-stats">
+          <div className="id-stats-bg" />
+          <div
+            className="container stats-auto-grid"
+            style={{ gridTemplateColumns: `repeat(${stats.length}, 1fr)` }}
+          >
             {stats.map((s, i) => (
-              <motion.div key={i} className="stat-box" style={{ textAlign: 'center', padding: '24px 16px', borderRight: i !== stats.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none' }}
-                initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-                <div style={{ fontSize: 36, marginBottom: 8 }}>{s.icon}</div>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 36, color: 'white', marginBottom: 4 }}>{s.value}</div>
-                <div style={{ fontSize: 12, color: 'var(--blue-200)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{s.label}</div>
+              <motion.div
+                key={i}
+                className="stat-box id-stat-item"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <div className="id-stat-icon">{s.icon}</div>
+                <div className="id-stat-value">{s.value}</div>
+                <div className="id-stat-label">{s.label}</div>
               </motion.div>
             ))}
           </div>
         </section>
       )}
 
-      <section style={{ background: 'var(--blue-700)', padding: '64px 0', textAlign: 'center' }}>
-        <div className="container">
-          <h2 className="section-title" style={{ color: 'white', marginBottom: 16 }}>Ship Your {title} Cargo</h2>
-          <p style={{ color: 'var(--blue-200)', marginBottom: 32 }}>Speak with our {title.toLowerCase()} logistics specialist today.</p>
-          <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/get-quote" className="btn-white">Get a Free Quote</Link>
-            <a href="mailto:info@nexllogistics.com" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'white', border: '2px solid rgba(255,255,255,0.4)', padding: '13px 30px', textDecoration: 'none', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 15, letterSpacing: '0.08em', textTransform: 'uppercase', transition: 'all 0.3s' }}>
-              ✉️ Email Us
-            </a>
-          </div>
+      {/* ── CTA ── */}
+      <section className="id-cta">
+        <div className="container id-cta-inner">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="section-tag" style={{ justifyContent: 'center' }}>Ready to Ship?</p>
+            <h2 className="section-title id-cta-title">
+              Ship Your <span style={{ color: 'var(--orange-light)' }}>{title}</span> Cargo
+            </h2>
+            <p className="id-cta-sub">
+              Speak with our {title.toLowerCase()} logistics specialist today.
+            </p>
+            <div className="id-cta-actions">
+              <Link to="/get-quote" className="btn-white">Get a Free Quote</Link>
+              <a href="mailto:info@nexllogistics.com" className="btn-outline-white">✉️ Email Us</a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
