@@ -132,3 +132,6 @@ nexl-logistics/
 - **Phone**: +91 98848 86797
 - **Email**: info@nexllogistics.com
 - **Proprietor**: Mohammed Idhirish
+
+
+---\n*Last updated: 2026-04-27*
