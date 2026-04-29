@@ -5,8 +5,8 @@ export default function CustomsClearance() {
     title="Customs Clearance"
     subtitle="Expert licensed CHA services — IEC, Bill of Entry, duty drawback, and complete compliance handling."
     description={[
-      "NEXL operates with a fully licensed, in-house Customs House Agent (CHA) team — giving us unmatched control over the customs clearance process. We handle both import and export customs across all major Indian ports and airports.",
-      "From IEC registration and Bill of Entry filing to duty drawback claims and DGFT compliance, our customs experts ensure your cargo clears without delays, penalties, or surprises.",
+      "NEXL operates with a fully licensed, in-house Customs House Agent (CHA) team — giving us unmatched control over the customs clearance process. We handle both import and export customs across all major Indian sea ports and airports.",
+      "From IEC registration and Preparing and filing the Bill of Entry (imports) or Shipping Bill (exports) with proper Regulatory Compliance; Classification & Valuation Process, Managing \"Swift\" clearance for specialized, restricted, or regulated items requiring additional permits from agencies like the CDSCO, PQ, AQ, FSSAI, ETC... our customs experts ensure your cargo clears without delays, penalties, or surprises.",
     ]}
     features={[
       { icon: '🏛️', title: 'Licensed CHA', desc: 'In-house licensed Customs House Agent for faster processing.' },
@@ -29,5 +29,6 @@ export default function CustomsClearance() {
       { icon: '📋', value: '5000+', label: 'BOEs Filed' },
       { icon: '💸', value: '100%', label: 'Compliance Rate' },
     ]}
+    img="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80"
   />
 }

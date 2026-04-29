@@ -64,7 +64,7 @@ export default function Contact() {
                 <div className="cc-icon">👤</div>
                 <div>
                   <strong>Proprietor</strong>
-                  <p>Mohammed Idhirish</p>
+                  <p>I.MOHAMAD IDHIRISH</p>
                 </div>
               </div>
               <div className="cc">
@@ -77,7 +77,7 @@ export default function Contact() {
             </div>
 
             <div className="cert-badges">
-              <span>IATA</span><span>FIATA</span><span>FFFAI</span><span>Licensed CHA</span>
+              <span>Licensed CHA</span>
             </div>
           </motion.div>
 

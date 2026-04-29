@@ -7,42 +7,49 @@ const services = [
     icon: '🚢', title: 'Sea Freight', path: '/services/sea-freight',
     desc: 'FCL & LCL ocean freight services connecting to over 150 ports worldwide. Competitive rates with major shipping lines.',
     features: ['FCL & LCL Options', '150+ Ports', 'Real-time Tracking', 'Full Documentation'],
+    img: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80',
     color: '#1a40b8',
   },
   {
     icon: '✈️', title: 'Air Freight', path: '/services/air-freight',
     desc: 'Express and charter solutions for time-critical shipments with global airline partnerships.',
     features: ['Express Delivery', 'Charter Services', 'Perishable Cargo', 'Dangerous Goods'],
+    img: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80',
     color: '#335cda',
   },
   {
     icon: '📦', title: 'LCL Consolidation', path: '/services/lcl-consolidation',
     desc: 'Cost-effective weekly groupage shipments for smaller cargo volumes with competitive rates.',
     features: ['Weekly Departures', 'Cost Efficient', 'Flexible Volumes', 'Hub Network'],
+    img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80',
     color: '#002496',
   },
   {
     icon: '🗂️', title: 'Customs Clearance', path: '/services/customs-clearance',
     desc: 'Expert CHA services including IEC, Bill of Entry (BOE), and duty drawback handling.',
     features: ['Licensed CHA', 'BOE Filing', 'Duty Drawback', 'IEC Support'],
+    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80',
     color: '#e8620a',
   },
   {
     icon: '🚚', title: 'Door-to-Door', path: '/services/door-to-door',
     desc: 'Comprehensive management from initial pick-up to final delivery, end-to-end.',
     features: ['Pick-up & Delivery', 'Last-Mile Service', 'Warehousing', 'Full Visibility'],
+    img: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80',
     color: '#1a40b8',
   },
   {
     icon: '🏗️', title: 'Project Cargo', path: '/services/project-cargo',
     desc: 'Specialists in ODC, heavy lift, and out-of-gauge cargo requiring specialized handling.',
     features: ['ODC Cargo', 'Heavy Lift', 'Out-of-Gauge', 'Route Survey'],
+    img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
     color: '#335cda',
   },
   {
     icon: '🛳️', title: 'Domestic & Coastal', path: '/services/domestic-coastal',
     desc: 'Pan-India surface and coastal shipping at competitive rates across all major ports.',
     features: ['Pan-India Network', 'Coastal Shipping', 'Surface Transport', 'Competitive Rates'],
+    img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
     color: '#002496',
   },
 ]
@@ -98,20 +105,26 @@ export default function Services() {
                 transition={{ duration: 0.45, delay: i * 0.07 }}
               >
                 <Link to={s.path} className="sv-card">
-                  <div className="sv-card-top">
-                    <span className="sv-icon">{s.icon}</span>
-                    <span className="sv-arrow-icon">→</span>
+                  <div className="sv-img-wrap">
+                    <img src={s.img} alt={s.title} className="sv-img" />
+                    <div className="sv-img-overlay" />
+                    <span className="sv-icon-overlay">{s.icon}</span>
                   </div>
-                  <h3 className="sv-title">{s.title}</h3>
-                  <p className="sv-desc">{s.desc}</p>
-                  <div className="sv-features">
-                    {s.features.map(f => (
-                      <span key={f} className="sv-feature-tag">{f}</span>
-                    ))}
-                  </div>
-                  <div className="sv-learn">
-                    <span>Learn More</span>
-                    <span className="sv-learn-arrow">→</span>
+                  <div className="sv-card-body">
+                    <div className="sv-card-top">
+                      <h3 className="sv-title">{s.title}</h3>
+                      <span className="sv-arrow-icon">→</span>
+                    </div>
+                    <p className="sv-desc">{s.desc}</p>
+                    <div className="sv-features">
+                      {s.features.map(f => (
+                        <span key={f} className="sv-feature-tag">{f}</span>
+                      ))}
+                    </div>
+                    <div className="sv-learn">
+                      <span>Learn More</span>
+                      <span className="sv-learn-arrow">→</span>
+                    </div>
                   </div>
                 </Link>
               </motion.div>

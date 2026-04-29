@@ -2,14 +2,15 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './ServiceDetail.css'
 
-export default function ServiceDetail({ icon, title, subtitle, description, features, process, highlights }) {
+export default function ServiceDetail({ icon, title, subtitle, description, features, process, highlights, img }) {
   return (
     <div className="service-detail-page">
 
       {/* ── Page Hero ── */}
-      <div className="page-hero sd-hero">
+      <div className="page-hero sd-hero" style={{ backgroundImage: `url(${img})` }}>
+        <div className="sd-hero-overlay" />
         <div className="sd-hero-glow" />
-        <div className="container">
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="breadcrumb">
             <Link to="/">Home</Link><span className="sep">/</span>
             <Link to="/services">Services</Link><span className="sep">/</span>

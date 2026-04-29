@@ -62,7 +62,6 @@
   background: white;
   border: 1.5px solid var(--gray-200);
   border-radius: var(--radius-lg);
-  padding: 32px 28px;
   text-decoration: none;
   color: var(--text-body);
   height: 100%;
@@ -80,16 +79,7 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
-}
-
-.sv-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--blue-100) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: var(--radius-lg);
+  z-index: 10;
 }
 
 .sv-card:hover {
@@ -99,38 +89,69 @@
 }
 
 .sv-card:hover::before { transform: scaleX(1); }
-.sv-card:hover::after { opacity: 1; }
+
+/* Image area */
+.sv-img-wrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sv-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sv-card:hover .sv-img { transform: scale(1.08); }
+
+.sv-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,18,77,0.1) 0%, rgba(0,18,77,0.5) 100%);
+  transition: opacity 0.3s;
+}
+
+.sv-card:hover .sv-img-overlay { opacity: 0.8; }
+
+.sv-icon-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 20px;
+  font-size: 40px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+}
+
+.sv-card:hover .sv-icon-overlay { transform: scale(1.1) rotate(5deg); }
+
+/* Card Body */
+.sv-card-body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
 .sv-card-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1;
+  align-items: center;
+  margin-bottom: 12px;
 }
-
-.sv-icon {
-  font-size: 48px;
-  display: block;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
-  transition: transform 0.3s ease;
-}
-
-.sv-card:hover .sv-icon { transform: scale(1.1) rotate(5deg); }
 
 .sv-arrow-icon {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--gray-400);
   font-weight: 700;
   transition: all 0.25s ease;
-  line-height: 1;
-  margin-top: 4px;
 }
 
 .sv-card:hover .sv-arrow-icon {
   color: var(--blue-500);
-  transform: translate(4px, -4px);
+  transform: translateX(4px);
 }
 
 .sv-title {

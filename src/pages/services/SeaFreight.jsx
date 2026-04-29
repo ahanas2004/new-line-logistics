@@ -30,5 +30,6 @@ export default function SeaFreight() {
       { icon: '📦', value: 'FCL+LCL', label: 'All Container Types' },
       { icon: '📡', value: '24/7', label: 'Tracking' },
     ]}
+    img="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80"
   />
 }

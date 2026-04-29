@@ -171,16 +171,6 @@ export default function Home() {
         />
 
         <div className="container hero-content">
-          <motion.div
-            className="hero-badge"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="badge-dot" />
-            IATA · FIATA · FFFAI Certified · Chennai
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -281,7 +271,7 @@ export default function Home() {
             <ServiceCard icon="🚢" title="Sea Freight" desc="FCL & LCL ocean freight to 150+ ports worldwide with full tracking." path="/services/sea-freight" delay={0} />
             <ServiceCard icon="✈️" title="Air Freight" desc="Express & charter solutions for time-critical shipments globally." path="/services/air-freight" delay={0.1} />
             <ServiceCard icon="📦" title="LCL Consolidation" desc="Cost-effective weekly groupage for smaller cargo volumes." path="/services/lcl-consolidation" delay={0.2} />
-            <ServiceCard icon="🗂️" title="Customs Clearance" desc="Expert CHA — IEC, Bill of Entry, duty drawback handling." path="/services/customs-clearance" delay={0.3} />
+            <ServiceCard icon="🗂️" title="Customs Clearance" desc="Licensed in-house CHA — Import/Export clearance across all major Indian ports." path="/services/customs-clearance" delay={0.3} />
             <ServiceCard icon="🚚" title="Door-to-Door" desc="End-to-end management from pick-up to final delivery." path="/services/door-to-door" delay={0.4} />
             <ServiceCard icon="🏗️" title="Project Cargo" desc="ODC, heavy lift and out-of-gauge cargo specialists." path="/services/project-cargo" delay={0.5} />
             <ServiceCard icon="🛳️" title="Domestic & Coastal" desc="Pan-India surface and coastal shipping at competitive rates." path="/services/domestic-coastal" delay={0.6} />
@@ -343,7 +333,7 @@ export default function Home() {
             <div className="why-list">
               {[
                 { icon: '📡', title: 'Real-time Tracking', desc: '24/7 shipment visibility from origin to destination.' },
-                { icon: '🏅', title: 'Industry Accreditations', desc: 'IATA, FIATA, and FFFAI certified with licensed in-house CHA.' },
+                { icon: '🏛️', title: 'Licensed CHA', desc: 'Fully licensed in-house Customs House Agent for faster processing.' },
                 { icon: '🌐', title: 'Global Reach', desc: 'Trusted agent network spanning 80+ countries worldwide.' },
                 { icon: '📄', title: 'Expert Documentation', desc: 'Bills of Lading, Airway Bills, and customs paperwork handled flawlessly.' },
                 { icon: '🤝', title: 'Dedicated Support', desc: '24/7 access to personal account managers.' },

@@ -3,17 +3,7 @@ import { motion } from 'framer-motion'
 import './About.css'
 
 const team = [
-  { name: 'Mohammed Idhirish', role: 'Proprietor & Managing Director', icon: '👔' },
-  { name: 'Operations Team', role: 'Freight & Documentation Experts', icon: '🗂️' },
-  { name: 'CHA Division', role: 'Licensed Customs House Agents', icon: '🏛️' },
-  { name: 'Customer Success', role: '24/7 Support & Account Management', icon: '🤝' },
-]
-
-const certifications = [
-  { name: 'IATA', full: 'International Air Transport Association', icon: '✈️' },
-  { name: 'FIATA', full: 'International Federation of Freight Forwarders', icon: '🌐' },
-  { name: 'FFFAI', full: 'Federation of Freight Forwarders Associations in India', icon: '🇮🇳' },
-  { name: 'Licensed CHA', full: 'Customs House Agent — In-house Licensed', icon: '📜' },
+  { name: 'I. MOHAMAD IDHIRISH', role: 'Proprietor & Managing Director', icon: '👔' },
 ]
 
 export default function About() {
@@ -72,32 +62,6 @@ export default function About() {
               <div className="chip"><strong>24/7</strong> Support</div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section className="certs-section">
-        <div className="container">
-          <div className="section-center">
-            <p className="section-tag">Trusted & Accredited</p>
-            <h2 className="section-title">Our <span>Certifications</span></h2>
-          </div>
-          <div className="certs-grid">
-            {certifications.map((c, i) => (
-              <motion.div
-                key={c.name}
-                className="cert-card"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <span className="cert-icon">{c.icon}</span>
-                <strong>{c.name}</strong>
-                <p>{c.full}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

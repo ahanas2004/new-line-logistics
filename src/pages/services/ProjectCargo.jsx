@@ -29,5 +29,6 @@ export default function ProjectCargo() {
       { icon: '🏗️', value: '200+', label: 'Projects Delivered' },
       { icon: '✅', value: '100%', label: 'Safety Record' },
     ]}
+    img="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
   />
 }

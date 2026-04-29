@@ -29,5 +29,6 @@ export default function Retail() {
       { icon: '⚡', value: '48hrs', label: 'Express Delivery' },
       { icon: '🌐', value: '50+', label: 'Destination Markets' },
     ]}
+    img="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80"
   />
 }

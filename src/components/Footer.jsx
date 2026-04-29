@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <Link to="/"><img src="/nexl_logo.jpeg" alt="NEXL" className="footer-logo" /></Link>
-              <p>Newline Express Logistics — Your trusted global freight partner from Chennai to the world. IATA · FIATA · FFFAI Certified.</p>
+              <p>Newline Express Logistics — Your trusted global freight partner from Chennai to the world.</p>
               <div className="footer-socials">
                 <a href="#" aria-label="LinkedIn">in</a>
                 <a href="#" aria-label="Twitter">𝕏</a>
@@ -62,7 +62,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <p>© {new Date().getFullYear()} Newline Express Logistics (NEXL). All rights reserved.</p>
-          <p>Proprietor: Mohammed Idhirish</p>
+          <p>Proprietor: I.MOHAMAD IDHIRISH</p>
         </div>
       </div>
     </footer>

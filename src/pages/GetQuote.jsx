@@ -15,7 +15,7 @@ const SERVICES = [
 
 const TRUST_ITEMS = [
   { icon: '⚡', title: 'Fast Response', body: 'Quote within 4 business hours guaranteed.' },
-  { icon: '🏅', title: 'IATA · FIATA · FFFAI', body: 'Internationally certified freight forwarder.' },
+  { icon: '🏛️', title: 'Licensed CHA', body: 'Fully licensed in-house Customs House Agent.' },
   { icon: '📞', title: 'Call Us', body: '+91 98848 86797', link: 'tel:+919884886797' },
   { icon: '✉️', title: 'Email Us', body: 'info@nexllogistics.com', link: 'mailto:info@nexllogistics.com' },
 ]

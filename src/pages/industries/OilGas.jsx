@@ -10,14 +10,14 @@ export default function OilGas() {
     ]}
     challenges={[
       "Transporting oversized drilling equipment and subsea components.",
-      "Dangerous goods (DG) classification and IMO/IATA-compliant handling.",
+      "Dangerous goods (DG) classification and IMO/DGR-compliant handling.",
       "Remote delivery to offshore platforms and onshore field locations.",
       "Urgent AOG (Aircraft on Ground) style expediting for critical spare parts.",
       "ATA Carnet and temporary import/export documentation for equipment.",
     ]}
     solutions={[
       { icon: '🏗️', title: 'Heavy Equipment', desc: 'ODC and project cargo for rigs, wellheads, and modules.' },
-      { icon: '⚠️', title: 'Dangerous Goods', desc: 'IMDG and IATA DGR-certified handling for hazmat cargo.' },
+      { icon: '⚠️', title: 'Dangerous Goods', desc: 'IMDG and DGR-certified handling for hazmat cargo.' },
       { icon: '⚡', title: 'AOG Expediting', desc: 'Round-the-clock critical spare parts air freight.' },
       { icon: '🛳️', title: 'Offshore Logistics', desc: 'Supply vessel coordination for platform deliveries.' },
       { icon: '📄', title: 'ATA Carnet', desc: 'Temporary export/import documentation for field equipment.' },
@@ -29,5 +29,6 @@ export default function OilGas() {
       { icon: '🌐', value: '25+', label: 'Countries' },
       { icon: '⚡', value: '24/7', label: 'Emergency Support' },
     ]}
+    img="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1200&q=80"
   />
 }

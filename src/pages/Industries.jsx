@@ -6,37 +6,37 @@ const industries = [
   {
     icon: '🚗', title: 'Automotive', path: '/industries/automotive',
     desc: 'CKD/CBU vehicles and spare parts — JIT logistics for OEMs and dealers.',
-    img: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80',
     tag: 'JIT Logistics',
   },
   {
     icon: '💊', title: 'Pharmaceuticals', path: '/industries/pharmaceuticals',
     desc: 'GDP-compliant cold chain logistics for APIs, formulations, and medical devices.',
-    img: 'https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80',
     tag: 'Cold Chain',
   },
   {
     icon: '⚙️', title: 'Oil & Gas', path: '/industries/oil-gas',
     desc: 'Project cargo and DG freight for upstream and downstream energy operations.',
-    img: 'https://images.unsplash.com/photo-1620825937374-87fc7d6aaf8c?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=800&q=80',
     tag: 'DG Certified',
   },
   {
     icon: '🛒', title: 'Retail & E-commerce', path: '/industries/retail-ecommerce',
     desc: 'Fast, flexible cross-border freight for online retailers and marketplace sellers.',
-    img: 'https://images.unsplash.com/photo-1586528116311-ad8ed7c663c0?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80',
     tag: 'Express',
   },
   {
     icon: '🔧', title: 'Engineering', path: '/industries/engineering',
     desc: 'Heavy machinery, industrial equipment, and fabricated goods logistics.',
-    img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80',
     tag: 'ODC Capable',
   },
   {
     icon: '🧪', title: 'Chemicals', path: '/industries/chemicals',
     desc: 'IMDG-compliant handling for hazardous and specialty chemical shipments.',
-    img: 'https://images.unsplash.com/photo-1614935151651-0bea6508abb0?auto=format&fit=crop&w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?auto=format&fit=crop&w=800&q=80',
     tag: 'IMDG Certified',
   },
 ]

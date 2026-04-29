@@ -29,5 +29,6 @@ export default function Pharma() {
       { icon: '🌐', value: '60+', label: 'Destination Countries' },
       { icon: '📋', value: '0', label: 'Compliance Failures' },
     ]}
+    img="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80"
   />
 }

@@ -29,5 +29,6 @@ export default function DoorToDoor() {
       { icon: '🤝', value: '1', label: 'Point of Contact' },
       { icon: '⏱️', value: '24/7', label: 'Support' },
     ]}
+    img="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80"
   />
 }

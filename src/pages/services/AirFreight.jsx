@@ -6,15 +6,15 @@ export default function AirFreight() {
     subtitle="Express and charter solutions for time-critical shipments with global airline partnerships."
     description={[
       "When speed is paramount, NEXL's air freight services deliver. We work with leading international airlines to provide express cargo solutions, ensuring your time-sensitive shipments arrive on time, every time.",
-      "Our IATA-certified team handles all types of airfreight — from standard cargo and perishables to dangerous goods — managing all airway bill documentation, customs clearance, and last-mile delivery.",
+      "Our team handles all types of airfreight — from standard cargo and perishables to dangerous goods — managing all airway bill documentation, customs clearance, and last-mile delivery.",
     ]}
     features={[
       { icon: '⚡', title: 'Express Services', desc: 'Next-day and 2-day delivery to major global cities.' },
       { icon: '✈️', title: 'Charter Solutions', desc: 'Dedicated charters for large or urgent shipments.' },
       { icon: '🌡️', title: 'Perishable Cargo', desc: 'Temperature-controlled handling for pharma and food.' },
-      { icon: '⚠️', title: 'Dangerous Goods', desc: 'IATA DGR-compliant handling for hazardous materials.' },
+      { icon: '⚠️', title: 'Dangerous Goods', desc: 'Professional handling for hazardous materials.' },
       { icon: '📋', title: 'Airway Bills', desc: 'Full AWB documentation and customs filing.' },
-      { icon: '🏅', title: 'IATA Certified', desc: 'Fully accredited IATA freight forwarding.' },
+      { icon: '📦', title: 'Consolidation', desc: 'Cost-effective consolidated air cargo options.' },
     ]}
     process={[
       { title: 'Enquiry', desc: 'Share shipment details including dimensions and urgency.' },
@@ -29,5 +29,6 @@ export default function AirFreight() {
       { icon: '🌐', value: '80+', label: 'Countries' },
       { icon: '📦', value: '100%', label: 'On-time Record' },
     ]}
+    img="https://images.unsplash.com/photo-1436491865332-7a61a109c0f3?auto=format&fit=crop&w=1200&q=80"
   />
 }

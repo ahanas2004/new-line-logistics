@@ -176,12 +176,14 @@
 .team-section { padding: 100px 0; background: white; }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 20px;
 }
 
 .team-card {
+  max-width: 320px;
+  width: 100%;
   text-align: center;
   padding: 44px 24px;
   border: 1.5px solid var(--gray-200);
